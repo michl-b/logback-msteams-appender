@@ -1,5 +1,7 @@
 This is a simple [Logback](http://logback.qos.ch/) appender which pushes logs to [MsTeams](https://products.office.com/en-us/microsoft-teams/group-chat-software) channel.
 
+[ ![Download](https://api.bintray.com/packages/michl-b/logback-msteams-appender/logback-msteams-appender/images/download.svg) ](https://bintray.com/michl-b/logback-msteams-appender/logback-msteams-appender/_latestVersion)
+
 # How to setup
 
 Add MsTeamsAppender configuration to logback.xml file
