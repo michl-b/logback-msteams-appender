@@ -29,3 +29,11 @@ Add MsTeamsAppender configuration to logback.xml file
 
 </configuration>
 ```
+
+# build a release
+Publish artifact in a new version to bintray [https://bintray.com/michl-b/logback-msteams-appender/logback-msteams-appender](https://bintray.com/michl-b/logback-msteams-appender/logback-msteams-appender)
+
+```bash
+mvn release:prepare
+mvn release:perform
+```
