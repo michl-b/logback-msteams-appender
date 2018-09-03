@@ -4,7 +4,27 @@ This is a simple [Logback](http://logback.qos.ch/) appender which pushes logs to
 
 # How to setup
 
-Add MsTeamsAppender configuration to logback.xml file
+Add the following settings to you pom.xml.
+```xml
+    <dependency>
+      <groupId>com.github.michl-b</groupId>
+      <artifactId>logback-msteams-appender</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>bintray jcenter</id>
+      <name>bintray</name>
+      <url>https://jcenter.bintray.com</url>
+    </repository>
+  </repositories>
+```
+
+Add MsTeamsAppender configuration to logback.xml or logback-spring.xml file.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
