@@ -8,7 +8,7 @@
 
   <groupId>com.github.michl-b</groupId>
   <artifactId>logback-msteams-appender</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3-SNAPSHOT</version>
 
   <licenses>
     <license>
@@ -23,7 +23,7 @@
     </developerConnection>
     <connection>scm:git:https://github.com/michl-b/logback-msteams-appender.git</connection>
     <url>https://github.com/michl-b/logback-msteams-appender</url>
-    <tag>logback-msteams-appender-1.0.2</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <developers>
