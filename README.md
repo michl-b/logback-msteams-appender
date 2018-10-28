@@ -9,7 +9,7 @@ Add the following settings to you pom.xml.
     <dependency>
       <groupId>com.github.michl-b</groupId>
       <artifactId>logback-msteams-appender</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
 
   <repositories>
