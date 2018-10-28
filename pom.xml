@@ -1,86 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <name>Logback MS Teams Appender</name>
-    <description>Logback appender for sending messages to MS Teams chats.</description>
+  <name>Logback MS Teams Appender</name>
+  <description>Logback appender for sending messages to MS Teams chats.</description>
+  <url>https://github.com/michl-b/logback-msteams-appender</url>
+
+  <groupId>com.github.michl-b</groupId>
+  <artifactId>logback-msteams-appender</artifactId>
+  <version>1.0.2-SNAPSHOT</version>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <developerConnection>scm:git:https://github.com/michl-b/logback-msteams-appender.git
+    </developerConnection>
+    <connection>scm:git:https://github.com/michl-b/logback-msteams-appender.git</connection>
     <url>https://github.com/michl-b/logback-msteams-appender</url>
+    <tag>HEAD</tag>
+  </scm>
 
-    <groupId>com.github.michl-b</groupId>
-    <artifactId>logback-msteams-appender</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <developerConnection>scm:git:https://github.com/michl-b/logback-msteams-appender.git</developerConnection>
-        <connection>scm:git:https://github.com/michl-b/logback-msteams-appender.git</connection>
-        <url>https://github.com/michl-b/logback-msteams-appender</url>
-        <tag>HEAD</tag>
-    </scm>
-
-    <developers>
-        <developer>
-            <name>Michael Bartsch</name>
-            <email>mbartsch82@gmail.com</email>
-        </developer>
-    </developers>
+  <developers>
+    <developer>
+      <name>Michael Bartsch</name>
+      <email>mbartsch82@gmail.com</email>
+    </developer>
+  </developers>
 
   <distributionManagement>
     <repository>
       <id>bintray-michl-b-logback-msteams-appender</id>
       <name>michl-b-logback-msteams-appender</name>
-      <url>https://api.bintray.com/maven/michl-b/logback-msteams-appender/logback-msteams-appender/;publish=1</url>
+      <url>
+        https://api.bintray.com/maven/michl-b/logback-msteams-appender/logback-msteams-appender/;publish=1
+      </url>
     </repository>
   </distributionManagement>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <logback.version>1.1.2</logback.version>
-        <junit.version>4.12</junit.version>
-        <jackson-databind.version>2.6.6</jackson-databind.version>
-        <BUILD_NUMBER>1</BUILD_NUMBER>
-    </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <java.version>1.8</java.version>
+    <logback.version>1.2.3</logback.version>
+    <junit.version>4.12</junit.version>
+    <jackson-databind.version>2.9.7</jackson-databind.version>
+    <BUILD_NUMBER>1</BUILD_NUMBER>
+  </properties>
 
-    <dependencies>
-        <!-- Logback -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson-databind.version}</version>
-        </dependency>
+  <dependencies>
+    <!-- Logback -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-databind.version}</version>
+    </dependency>
 
-        <!-- Testing -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <!-- Testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
